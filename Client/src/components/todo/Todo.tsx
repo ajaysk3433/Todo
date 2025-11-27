@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query";
 import { addTodo, deleteTodo } from "./api/post_request";
 import { ToastContainer, toast } from "react-toastify";
