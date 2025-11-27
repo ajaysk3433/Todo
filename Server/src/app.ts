@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "../dist")));
 app.use("/api/auth", authRouter);
 app.use("/api/user", authorization, todo);
 
-app.get("*", (req, res) => {
+app.get("/*splat", (req, res) => {
   res.sendFile(path.join(__dirname, "../dist", "index.html"));
 });
 

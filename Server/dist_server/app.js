@@ -24,7 +24,7 @@ app.use(express_1.default.json());
 app.use(express_1.default.static(path_1.default.join(__dirname, "../dist")));
 app.use("/api/auth", auth_1.default);
 app.use("/api/user", authorization, todo_1.default);
-app.get("*", (req, res) => {
+app.get("/*splat", (req, res) => {
     res.sendFile(path_1.default.join(__dirname, "../dist", "index.html"));
 });
 const PORT = process.env.PORT || 3000;
